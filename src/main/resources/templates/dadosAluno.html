@@ -8,23 +8,21 @@
 </head>
 <body>
 		
-		<form jsf:id="form">
-			<input type="hidden" jsf:value="#{alunoBean.aluno.matricula}" />
+		<form>
+			<input type="hidden" id="matricula" />
 			
 			<fieldset>
 				<legend>Dados Pessoais</legend>
-				<label for="nome">Nome:</label><br /> 
-				<input type="text" jsf:value="#{alunoBean.aluno.nome}" id="nome"  maxlength="64" jsf:label="Nome" >
-					<f:validateLength minimum="2" maximum="64" />
-				</input><br />
+				<label for="nome">Nome:</label><br/> 
+				<input type="text" id="nome"  maxlength="64" minlength="2" label="Nome" />
+				<br/>
 				
-				<label for="sexo">Sexo</label><br />
-				<select jsf:value="#{alunoBean.aluno.sexo}" id="sexo" size="0" required="required">
-					<f:selectItem itemLabel="Escolha..." itemValue="" />
-					<f:selectItems value="#{dataBean.sexos}"/>
-				</select><br /> 
+				<label for="sexo">Sexo</label><br/>
+				<select id="sexo" size="0" required="required">
+					<option itemLabel="Escolha..." itemValue=""></option>
+				</select><br/> 
 				
-				<label for="rg">RG:</label><br /> 
+				<label for="rg">RG:</label><br/> 
 				<input type="text" jsf:value="#{alunoBean.aluno.rg}" id="rg" maxlength="10" jsf:label="RG">
 					<f:validateLongRange minimum="100000" maximum="9999999999" />
 					<f:validateRequired/>
