@@ -4,14 +4,15 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Year;
 
-import br.com.academia.util.StringUtils;
-import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.Size;
 
+import br.com.academia.util.StringUtils;
 
 @Entity
 @Table(name = "ALUNOS")
@@ -31,6 +32,7 @@ public class Alunos implements Serializable{
 	@Column(name = "ID", nullable = false, length = 8)
 	private String matricula;
 	
+	@Size(max= 64, message= "O tamanho máximo do nome é de {max} caracteres")
 	@Column(name = "NOME", nullable = false, length = 64)
 	private String nome;
 	

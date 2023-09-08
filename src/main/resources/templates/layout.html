@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Academia</title>
+		<link rel="stylesheet" type="text/css" href="../static/css/Loucademia_Estilo.css" />
+	</head>
+	<body>
+		<header>
+		<h1>LOUCADEMIA</h1>
+		
+		<!--  	<img src="images/Logo Brasfelt02.PNG" /> -->
+			<nav>
+				<div>
+					<a>Novo Aluno</a><br />
+					<a>Pesquisa de aluno</a><br />
+					<a>Controle de acesso</a><br />
+					<a>Relat�rios de Entradas e Sa�das</a><br />
+					<a>Relat�rios de Situa��es</a><br />
+				</div>
+			</nav>
+		</header>
+		
+		<h1>#{title}</h1>
+		
+		<h:panelGroup rendered="#{!facesContext.messageList.isEmpty()}">
+			<div id="infoMessage">
+				<h:messages />
+			</div>
+		</h:panelGroup>
+		
+		<br/>
+		
+	</body>
+</html>
